@@ -12,7 +12,7 @@ img/ana-carolina-ribeiro.jpg
 img/frutas.jpg
 img/favicon.png          ícone da aba (monograma AR)
 img/apple-touch-icon.png ícone ao salvar na tela do celular
-vercel.json              cache das imagens e URLs limpas
+vercel.json              configuração da Vercel (URLs limpas)
 ```
 
 ## Publicar
@@ -24,11 +24,9 @@ vercel.json              cache das imagens e URLs limpas
    - Output Directory: vazio (raiz)
 3. Clique em **Deploy**. Cada novo commit no GitHub publica a atualização sozinho.
 
-## Depois do primeiro deploy
+## Imagens
 
-Troque o endereço da imagem de prévia (linha `og:image` no `index.html`) pelo endereço completo do site,
-por exemplo `https://nutri-anaribeiro.vercel.app/img/ana-carolina-ribeiro.jpg`,
-para a foto aparecer quando o link for compartilhado no WhatsApp.
+Ao trocar uma imagem mantendo o mesmo nome, aumente o número `?v=2` nos links do `index.html` (por exemplo `?v=3`) para os navegadores baixarem a versão nova.
 
 ## Editar conteúdo
 
