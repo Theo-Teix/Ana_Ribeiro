@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nutricionista Ana Carolina Ribeiro | Salto, SP</title>
+<meta name="description" content="Transforme a sua vida por meio de uma alimentação prazerosa e sem restrições! Nutricionista em Salto, SP. CRN-3 78052.">
+<meta property="og:title" content="Nutricionista Ana Carolina Ribeiro">
+<meta property="og:description" content="Transforme a sua vida por meio de uma alimentação prazerosa e sem restrições!">
+<meta property="og:image" content="img/ana-carolina-ribeiro.jpg">
+<meta property="og:locale" content="pt_BR">
+<meta name="theme-color" content="#FBFCFA">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600&family=Marcellus&display=swap" rel="stylesheet">
+<style>
+:root{
+  --floresta:#273F33;
+  --floresta-2:#1E3228;
+  --salvia:#A3C4AC;
+  --salvia-clara:#EEF3EF;
+  --blush:#DDB7AC;
+  --blush-clara:#F7EEEA;
+  --blush-texto:#94604F;
+  --papel:#FBFCFA;
+  --texto:#273F33;
+  --texto-suave:#4F6358;
+  --linha:#D6E2D9;
+  --serif:"Marcellus", "Cormorant Garamond", Georgia, serif;
+  --sans:"Albert Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --max:1180px;
+  --gutter:clamp(16px, 4vw, 40px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--papel);color:var(--texto);font-family:var(--sans);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--floresta);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;letter-spacing:-.005em}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--floresta);color:#fff;padding:10px 16px;border-radius:6px;z-index:100}
+.skip:focus{left:8px}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:52px;padding:0 1.6em;border-radius:999px;font:600 1rem/1 var(--sans);text-decoration:none;transition:background-color .2s, color .2s, box-shadow .2s;white-space:nowrap}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-primario{background:var(--floresta);color:#fff}
+.btn-primario:hover{background:var(--floresta-2);box-shadow:0 0 0 4px var(--salvia-clara)}
+.btn-contorno{border:1.5px solid var(--floresta);color:var(--floresta);background:transparent}
+.btn-contorno:hover{background:var(--salvia-clara)}
+.btn-claro{background:#fff;color:var(--floresta)}
+.btn-claro:hover{background:var(--blush-clara)}
+.link-wa{display:inline-flex;align-items:center;gap:.5em;font-weight:600;color:var(--floresta);text-decoration:none;border-bottom:1.5px solid var(--blush);padding-bottom:2px}
+.link-wa:hover{border-bottom-color:var(--floresta)}
+.link-wa svg{width:18px;height:18px}
+
+/* Cabeçalho */
+.topo{position:sticky;top:0;z-index:50;background:rgba(251,252,250,.92);backdrop-filter:saturate(1.2) blur(10px);-webkit-backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
+.topo.rolou{border-bottom-color:var(--linha)}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;height:88px;gap:24px}
+.topo .logo img{height:64px;width:auto}
+.topo nav{display:flex;gap:28px}
+.topo nav a{text-decoration:none;font-size:.95rem;color:var(--texto-suave)}
+.topo nav a:hover{color:var(--floresta)}
+.topo .btn{min-height:44px;padding:0 1.2em;font-size:.95rem}
+.menu-botao{display:none;align-items:center;gap:10px;min-height:44px;padding:0 4px 0 12px;background:none;border:0;color:var(--floresta);font:600 1rem/1 var(--sans);cursor:pointer}
+.menu-botao .linhas{position:relative;width:22px;height:14px}
+.menu-botao .linhas span{position:absolute;left:0;right:0;height:1.6px;background:currentColor;border-radius:2px;transition:transform .25s ease, opacity .2s}
+.menu-botao .linhas span:nth-child(1){top:0}
+.menu-botao .linhas span:nth-child(2){top:6px}
+.menu-botao .linhas span:nth-child(3){top:12px}
+.menu-botao[aria-expanded="true"] .linhas span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.menu-botao[aria-expanded="true"] .linhas span:nth-child(2){opacity:0}
+.menu-botao[aria-expanded="true"] .linhas span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.menu-movel{display:none}
+
+/* Hero */
+.hero{padding:clamp(40px,7vw,96px) 0 clamp(56px,8vw,112px)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,88px);align-items:center}
+.hero h1{font-size:clamp(2.3rem,4.6vw,4rem);line-height:1.08;max-width:17ch}
+.hero .apoio{margin-top:24px;font-size:1.1875rem;color:var(--texto-suave);max-width:46ch}
+.hero .acoes{margin-top:36px;display:flex;flex-wrap:wrap;align-items:center;gap:20px 28px}
+.nota{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--texto-suave);font-size:.95rem}
+.nota strong{color:var(--floresta);font-weight:600}
+.estrelas{display:inline-flex;gap:2px;color:#C99A8C}
+.estrelas svg{width:16px;height:16px}
+.hero .registro{margin-top:40px;padding-top:20px;border-top:1px solid var(--linha);font-size:.95rem;color:var(--texto-suave);max-width:46ch}
+
+.retrato{position:relative;justify-self:center;width:min(100%,440px)}
+.retrato .foto{position:relative;z-index:1;aspect-ratio:4/5;border-radius:999px 999px 28px 28px;overflow:hidden;background:var(--salvia-clara)}
+.retrato .foto img{width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+.retrato .anel{position:absolute;z-index:2;width:118%;left:-9%;top:-7%;pointer-events:none;overflow:visible}
+.retrato .anel circle{fill:none;stroke:var(--blush);stroke-width:1.6;stroke-linecap:round}
+.anel .traco{stroke-dasharray:1000;stroke-dashoffset:1000;animation:desenhar 2.2s .3s cubic-bezier(.6,.1,.2,1) forwards}
+@keyframes desenhar{to{stroke-dashoffset:140}}
+@media (prefers-reduced-motion:reduce){.anel .traco{animation:none;stroke-dashoffset:140}}
+
+/* Seções */
+.secao{padding:clamp(64px,9vw,128px) 0;scroll-margin-top:72px}
+.secao-titulo{font-size:clamp(1.9rem,3.4vw,2.75rem);line-height:1.12;max-width:20ch}
+.secao-intro{margin-top:16px;color:var(--texto-suave);max-width:58ch;font-size:1.125rem}
+
+/* Sobre + especialidades */
+.sobre{background:var(--salvia-clara)}
+.sobre .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,6vw,96px);align-items:start}
+.sobre .texto p{font-size:1.125rem;color:var(--texto-suave);max-width:46ch;margin-top:20px}
+.especialidades{list-style:none;margin:0;padding:0;border-top:1px solid var(--salvia)}
+.especialidades li{border-bottom:1px solid var(--salvia);padding:32px 0;scroll-margin-top:104px}
+.especialidades h3{font-size:clamp(1.5rem,2.4vw,1.95rem);line-height:1.15}
+.especialidades p{color:var(--texto-suave);max-width:48ch;margin-top:10px}
+.especialidades .link-wa{margin-top:16px}
+
+/* Serviços */
+.servicos .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,96px);align-items:center}
+.servicos .imagem{border-radius:28px;overflow:hidden;aspect-ratio:5/4}
+.servicos .imagem img{width:100%;height:100%;object-fit:cover;object-position:100% 0;transform:scale(1.7);transform-origin:96% 2%}
+.lista-servicos{list-style:none;margin:32px 0 0;padding:0}
+.lista-servicos li{display:grid;grid-template-columns:28px 1fr;gap:4px 16px;padding:20px 0;border-bottom:1px solid var(--linha);scroll-margin-top:104px}
+.lista-servicos li:last-child{border-bottom:0}
+.lista-servicos svg{width:24px;height:24px;color:var(--floresta);margin-top:3px;grid-row:span 3}
+.lista-servicos h3{font-family:var(--sans);font-weight:600;font-size:1.0625rem;line-height:1.4}
+.lista-servicos p{color:var(--texto-suave);font-size:1rem}
+.lista-servicos .link-wa{margin-top:8px;justify-self:start;font-size:.95rem}
+
+/* Planos */
+.planos{background:var(--blush-clara)}
+.planos .cabecalho{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.planos .cabecalho p{color:var(--texto-suave);max-width:36ch}
+.grade-planos{margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1.5px solid var(--floresta)}
+.plano{padding:36px clamp(20px,3vw,40px) 8px;display:flex;flex-direction:column;gap:16px;scroll-margin-top:104px}
+.plano + .plano{border-left:1px solid var(--blush)}
+.plano:first-child{padding-left:0}
+.plano:last-child{padding-right:0}
+.plano .duracao{font-size:.95rem;color:var(--blush-texto);font-weight:600}
+.plano h3{font-size:clamp(1.6rem,2.4vw,2rem);line-height:1.1}
+.plano p{color:var(--texto-suave);flex:1}
+.barra{height:6px;background:rgba(39,63,51,.1);border-radius:6px;position:relative;overflow:hidden}
+.barra span{position:absolute;inset:0 auto 0 0;background:var(--floresta);border-radius:6px}
+.barra-1 span{width:6px}
+.barra-90 span{width:50%}
+.barra-180 span{width:100%}
+.plano .btn{align-self:flex-start;margin-top:8px}
+.planos .rodape-planos{margin-top:40px;color:var(--texto-suave);font-size:.95rem}
+
+/* Avaliações */
+.avaliacoes .wrap{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(32px,6vw,96px);align-items:start}
+.placar{position:sticky;top:128px}
+.placar .numero{font-family:var(--serif);font-size:clamp(5rem,10vw,8.5rem);line-height:.9;color:var(--floresta)}
+.placar .estrelas{margin-top:16px}
+.placar .estrelas svg{width:22px;height:22px}
+.placar p{margin-top:12px;color:var(--texto-suave)}
+.placar .link-wa{margin-top:24px}
+.depoimentos{list-style:none;margin:0;padding:0;columns:2;column-gap:40px}
+.depoimentos li{break-inside:avoid;padding:0 0 36px}
+.depoimentos blockquote{margin:0;font-family:var(--serif);font-size:1.4rem;line-height:1.35}
+.depoimentos li:first-child blockquote{font-size:clamp(1.7rem,2.6vw,2.1rem)}
+.depoimentos blockquote::before{content:"“";display:block;font-size:3rem;line-height:.6;color:var(--blush);margin-bottom:12px}
+.depoimentos .fonte{margin-top:14px;font-size:.9rem;color:var(--texto-suave)}
+.pontos{display:none}
+
+/* Consultório */
+.consultorio{background:var(--salvia-clara)}
+.consultorio .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(32px,6vw,80px);align-items:stretch}
+.info{display:grid;gap:28px;margin-top:36px}
+.info h3{font-family:var(--sans);font-weight:600;font-size:1rem;margin-bottom:6px}
+.info address{font-style:normal;color:var(--texto-suave)}
+.info a{color:var(--floresta)}
+.horarios{width:100%;border-collapse:collapse;color:var(--texto-suave);font-size:1rem;max-width:340px}
+.horarios td{padding:4px 0}
+.horarios td:last-child{text-align:right;color:var(--floresta)}
+.contatos{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.consultorio .acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.mapa{border-radius:28px;overflow:hidden;min-height:420px;background:#dfe7e1}
+.mapa iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+
+/* Chamada final */
+.final{background:var(--floresta);color:#fff;text-align:center;padding:clamp(72px,10vw,128px) 0}
+.final h2{font-size:clamp(2rem,4vw,3.25rem);line-height:1.1}
+.final p{margin:16px auto 36px;color:#D3E2D7;max-width:44ch;font-size:1.125rem}
+
+/* Rodapé */
+.rodape{padding:48px 0 calc(48px + env(safe-area-inset-bottom))}
+.rodape .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;font-size:.9rem;color:var(--texto-suave)}
+.rodape img{height:52px;width:auto}
+.rodape .redes{display:flex;gap:20px}
+.rodape a{text-decoration:none}
+.rodape a:hover{text-decoration:underline}
+
+/* Barra fixa no celular */
+.barra-movel{display:none}
+
+@media (max-width:960px){
+  .topo nav{display:none}
+  .topo .wrap > .btn{display:none}
+  .menu-botao{display:inline-flex}
+  .menu-movel{display:block;position:fixed;inset:0;top:var(--altura-topo,72px);z-index:45;background:var(--papel);padding:8px var(--gutter) calc(32px + env(safe-area-inset-bottom));overflow-y:auto;visibility:hidden;opacity:0;transform:translateY(-8px);transition:opacity .22s ease, transform .22s ease, visibility 0s .22s}
+  .menu-movel.aberto{visibility:visible;opacity:1;transform:none;transition:opacity .22s ease, transform .22s ease}
+  .menu-movel ul{list-style:none;margin:0;padding:0}
+  .menu-movel li a{display:flex;justify-content:space-between;align-items:center;min-height:64px;border-bottom:1px solid var(--linha);font-family:var(--serif);font-size:1.75rem;text-decoration:none;color:var(--floresta)}
+  .menu-movel .btn{width:100%;margin-top:32px}
+  .menu-movel .contato-rapido{margin-top:24px;color:var(--texto-suave);font-size:.95rem;line-height:1.7}
+  body.menu-aberto{overflow:hidden}
+  body.menu-aberto .barra-movel{transform:translateY(110%)}
+  .hero .wrap,.sobre .wrap,.servicos .wrap,.avaliacoes .wrap,.consultorio .wrap{grid-template-columns:minmax(0,1fr)}
+  .retrato{order:-1;width:min(64%,320px);margin-top:8px}
+  .hero h1{max-width:18ch}
+  .placar{position:static}
+  .depoimentos{columns:1}
+  .grade-planos{grid-template-columns:1fr;border-top:0}
+  .plano,.plano:first-child,.plano:last-child{padding:28px 0 32px;border-top:1.5px solid var(--floresta)}
+  .plano + .plano{border-left:0}
+  .servicos .imagem{aspect-ratio:16/10}
+}
+@media (max-width:640px){
+  body{font-size:1rem;padding-bottom:84px}
+  .topo .wrap{height:72px}
+  .topo .logo img{height:50px}
+  .hero{padding-top:20px}
+  .retrato{width:min(70%,300px)}
+  .hero h1{font-size:2.15rem;line-height:1.1}
+  .hero .apoio{font-size:1.0625rem;margin-top:16px}
+  .hero .acoes{margin-top:28px;gap:16px}
+  .hero .acoes .btn{width:100%}
+  .hero .nota{width:100%;justify-content:center}
+  .hero .registro{margin-top:28px;text-align:center}
+  .secao{padding:56px 0}
+  .secao-titulo{font-size:1.85rem}
+  .sobre .texto p{font-size:1.0625rem}
+  .especialidades li{padding:24px 0}
+  .especialidades h3{font-size:1.45rem}
+  .especialidades .link-wa,.lista-servicos .link-wa{min-height:44px;border-bottom:0;text-decoration:underline;text-decoration-color:var(--blush);text-underline-offset:5px;text-decoration-thickness:1.5px;padding:0}
+  .especialidades .link-wa{margin-top:8px}
+  .lista-servicos .link-wa{margin-top:0}
+  .servicos .imagem{aspect-ratio:16/9;border-radius:20px}
+  .lista-servicos{margin-top:20px}
+  .grade-planos{margin-top:32px}
+  .plano .btn{width:100%}
+  .placar{display:grid;grid-template-columns:auto 1fr;grid-template-areas:"titulo titulo" "numero info";column-gap:20px;align-items:center}
+  .placar h2{grid-area:titulo}
+  .placar .numero{grid-area:numero;font-size:5rem;margin-top:20px!important}
+  .placar .resumo{grid-area:info;margin-top:20px}
+  .depoimentos{display:flex;columns:auto;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 var(--gutter);margin:0 calc(var(--gutter) * -1);padding:4px var(--gutter) 8px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .depoimentos::-webkit-scrollbar{display:none}
+  .depoimentos li{flex:0 0 84%;scroll-snap-align:start;background:#fff;border:1px solid var(--linha);border-radius:20px;padding:24px 22px;display:flex;flex-direction:column;justify-content:space-between}
+  .depoimentos blockquote,.depoimentos li:first-child blockquote{font-size:1.3rem}
+  .pontos{display:flex;justify-content:center;gap:4px;margin-top:12px}
+  .pontos button{width:28px;height:28px;padding:0;border:0;background:none;cursor:pointer;display:grid;place-items:center}
+  .pontos button::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--linha);transition:background-color .2s, transform .2s}
+  .pontos button[aria-current="true"]::before{background:var(--floresta);transform:scale(1.25)}
+  .info{gap:24px;margin-top:28px}
+  .horarios{max-width:none}
+  .consultorio .acoes .btn{width:100%}
+  .mapa,.mapa iframe{min-height:320px}
+  .barra-movel{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(251,252,250,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--linha)}
+  .barra-movel{transition:transform .25s ease}
+  .barra-movel.oculta{transform:translateY(110%)}
+  .barra-movel .btn{width:100%}
+  .rodape .wrap{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm0 18.15a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.39 1.01 2.56.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29Z"/></symbol>
+  <symbol id="i-estrela" viewBox="0 0 20 20"><path fill="currentColor" d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></symbol>
+  <symbol id="i-consulta" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3.5v4.5a4.5 4.5 0 0 0 9 0V3.5"/><path d="M11.5 12.5v2a5 5 0 0 0 10 0v-2"/><circle cx="21.5" cy="10.5" r="1.8"/></g></symbol>
+  <symbol id="i-avaliacao" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="2.5" y="8" width="19" height="8" rx="2"/><path d="M6.5 8v3M10 8v4.5M13.5 8v3M17 8v4.5"/></g></symbol>
+  <symbol id="i-guia" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4.5h11a3 3 0 0 1 3 3V20H7a3 3 0 0 1-3-3Z"/><path d="M8 9h6M8 12.5h6M8 16h3"/></g></symbol>
+  <symbol id="i-app" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></g></symbol>
+</svg>
+
+<header class="topo" id="topo">
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="Ana Carolina Ribeiro, nutricionista. Ir para o início">
+      <img src="img/logo.png" alt="Ana Carolina Ribeiro, nutricionista" width="1552" height="672">
+    </a>
+    <nav aria-label="Seções da página">
+      <a href="#como-ajudo">Como ajudo</a>
+      <a href="#planos">Planos</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#consultorio">Consultório</a>
+    </nav>
+    <a class="btn btn-primario" data-wa="Olá, Ana! Vim pelo seu site e gostaria de agendar uma consulta." href="https://wa.me/5511976043761"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar consulta</a>
+    <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-movel">
+      <span class="rotulo">Menu</span>
+      <span class="linhas" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+</header>
+
+<div class="menu-movel" id="menu-movel">
+  <nav aria-label="Seções da página">
+    <ul>
+      <li><a href="#como-ajudo">Como ajudo</a></li>
+      <li><a href="#servicos">O que inclui</a></li>
+      <li><a href="#planos">Planos</a></li>
+      <li><a href="#avaliacoes">Avaliações</a></li>
+      <li><a href="#consultorio">Consultório</a></li>
+    </ul>
+  </nav>
+  <a class="btn btn-primario" data-wa="Olá, Ana! Vim pelo seu site e gostaria de agendar uma consulta." href="https://wa.me/5511976043761"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar consulta pelo WhatsApp</a>
+  <p class="contato-rapido">Av. dos Migrantes, 816, Jardim Planalto, Salto, SP<br>(11) 97604-3761</p>
+</div>
+
+<main id="conteudo">
+
+  <section class="hero" id="inicio">
+    <div class="wrap">
+      <div>
+        <h1>Transforme a sua vida por meio de uma alimentação prazerosa e sem restrições.</h1>
+        <p class="apoio">Atendimento individualizado, baseado em evidências, para quem busca resultados duradouros sem dietas restritivas.</p>
+        <div class="acoes">
+          <a class="btn btn-primario" data-wa="Olá, Ana! Vim pelo seu site e gostaria de agendar uma consulta." href="https://wa.me/5511976043761"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar consulta pelo WhatsApp</a>
+          <a class="nota" href="#avaliacoes">
+            <span class="estrelas" aria-hidden="true"><svg><use href="#i-estrela"/></svg><svg><use href="#i-estrela"/></svg><svg><use href="#i-estrela"/></svg><svg><use href="#i-estrela"/></svg><svg><use href="#i-estrela"/></svg></span>
+            <span><strong>5,0</strong> em 54 avaliações no Google</span>
+          </a>
+        </div>
+        <p class="registro">Ana Carolina Ribeiro, nutricionista em Salto, SP. CRN-3 78052.</p>
+      </div>
+
+      <figure class="retrato" style="margin:0">
+        <div class="foto">
+          <img src="img/ana-carolina-ribeiro.jpg" alt="Nutricionista Ana Carolina Ribeiro sorrindo, de blazer branco, no consultório" width="2400" height="3600" fetchpriority="high">
+        </div>
+        <svg class="anel" viewBox="0 0 200 200" aria-hidden="true">
+          <circle class="traco" cx="100" cy="100" r="96" pathLength="1000" transform="rotate(118 100 100)"/>
+        </svg>
+      </figure>
+    </div>
+  </section>
+
+  <section class="secao sobre" id="como-ajudo" aria-labelledby="titulo-sobre">
+    <div class="wrap">
+      <div class="texto">
+        <h2 class="secao-titulo" id="titulo-sobre">Como posso te ajudar</h2>
+        <p>Nutricionista em Salto especializada em obesidade e emagrecimento, ganho de massa muscular e reeducação alimentar.</p>
+      </div>
+      <ul class="especialidades">
+        <li id="emagrecimento">
+          <h3>Obesidade e emagrecimento</h3>
+          <p>Emagrecer sem dietas restritivas, com um plano que respeita a sua rotina e o que você gosta de comer.</p>
+          <a class="link-wa" data-wa="Olá, Ana! Vim pelo seu site e quero agendar uma consulta para emagrecimento." href="https://wa.me/5511976043761"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar para emagrecimento</a>
+        </li>
+        <li id="massa-muscular">
+          <h3>Ganho de massa muscular</h3>
+          <p>Uma alimentação pensada para o seu objetivo de ganhar massa, ajustada ao seu dia a dia.</p>
+          <a class="link-wa" data-wa="Olá, Ana! Vim pelo seu site e quero agendar uma consulta para ganho de massa muscular." href="https://wa.me/5511976043761"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar para ganho de massa</a>
+        </li>
+        <li id="reeducacao-alimentar">
+          <h3>Reeducação alimentar</h3>
+          <p>Uma relação mais leve com a comida, construída aos poucos, para resultados que duram.</p>
+          <a class="link-wa" data-wa="Olá, Ana! Vim pelo seu site e quero agendar uma consulta para reeducação alimentar." href="https://wa.me/5511976043761"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar para reeducação alimentar</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="secao servicos" id="servicos" aria-labelledby="titulo-servicos">
+    <div class="wrap">
+      <div class="imagem">
+        <img src="img/frutas.jpg" alt="Frutas frescas sobre a mesa: abacaxi, morangos, laranjas, bananas e um smoothie" width="1500" height="1000" loading="lazy">
+      </div>
+      <div>
+        <h2 class="secao-titulo" id="titulo-servicos">O que o acompanhamento inclui</h2>
+        <ul class="lista-servicos">
+          <li id="atendimento-nutricional">
+            <svg aria-hidden="true"><use href="#i-consulta"/></svg>
+            <h3>Atendimento nutricional</h3>
+            <p>Consulta individual para entender sua rotina, suas preferências e seus objetivos.</p>
+            <a class="link-wa" data-wa="Olá, Ana! Vim pelo seu site e quero saber mais sobre o atendimento nutricional." href="https://wa.me/5511976043761"><svg aria-hidden="true"><use href="#i-wa"/></svg>Perguntar sobre o atendimento</a>
+          </li>
+          <li id="avaliacao-fisica">
+            <svg aria-hidden="true"><use href="#i-avaliacao"/></svg>
+            <h3>Avaliação física</h3>
+            <p>Medidas corporais para acompanhar a sua evolução ao longo do processo.</p>
+            <a class="link-wa" data-wa="Olá, Ana! Vim pelo seu site e quero saber mais sobre a avaliação física." href="https://wa.me/5511976043761"><svg aria-hidden="true"><use href="#i-wa"/></svg>Perguntar sobre a avaliação</a>
+          </li>
+          <li id="materiais-de-apoio">
+            <svg aria-hidden="true"><use href="#i-guia"/></svg>
+            <h3>Materiais e guias de apoio personalizados</h3>
+            <p>Orientações feitas para você, para consultar no dia a dia.</p>
+            <a class="link-wa" data-wa="Olá, Ana! Vim pelo seu site e quero saber mais sobre os materiais e guias de apoio." href="https://wa.me/5511976043761"><svg aria-hidden="true"><use href="#i-wa"/></svg>Perguntar sobre os materiais</a>
+          </li>
+          <li id="aplicativo">
+            <svg aria-hidden="true"><use href="#i-app"/></svg>
+            <h3>Acesso a aplicativo de uso exclusivo</h3>
+            <p>Um aplicativo exclusivo para acompanhar o seu plano.</p>
+            <a class="link-wa" data-wa="Olá, Ana! Vim pelo seu site e quero saber mais sobre o aplicativo exclusivo." href="https://wa.me/5511976043761"><svg aria-hidden="true"><use href="#i-wa"/></svg>Perguntar sobre o aplicativo</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao planos" id="planos" aria-labelledby="titulo-planos">
+    <div class="wrap">
+      <div class="cabecalho">
+        <h2 class="secao-titulo" id="titulo-planos">Escolha como quer começar</h2>
+        <p>Uma consulta pontual ou um acompanhamento mais longo, para construir hábitos com apoio.</p>
+      </div>
+      <div class="grade-planos">
+        <article class="plano" id="sessao-pontual">
+          <span class="duracao">1 consulta</span>
+          <div class="barra barra-1" aria-hidden="true"><span></span></div>
+          <h3>Sessão pontual</h3>
+          <p>Uma consulta individual, para quem quer uma orientação pontual.</p>
+          <a class="btn btn-contorno" data-wa="Olá, Ana! Vim pelo seu site e tenho interesse na sessão pontual." href="https://wa.me/5511976043761"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar sessão pontual</a>
+        </article>
+        <article class="plano" id="plano-90-dias">
+          <span class="duracao">90 dias</span>
+          <div class="barra barra-90" aria-hidden="true"><span></span></div>
+          <h3>Plano 90 dias</h3>
+          <p>Acompanhamento por três meses, para construir novos hábitos com apoio.</p>
+          <a class="btn btn-primario" data-wa="Olá, Ana! Vim pelo seu site e tenho interesse no plano de 90 dias." href="https://wa.me/5511976043761"><svg aria-hidden="true"><use href="#i-wa"/></svg>Começar o plano de 90 dias</a>
+        </article>
+        <article class="plano" id="plano-180-dias">
+          <span class="duracao">180 dias</span>
+          <div class="barra barra-180" aria-hidden="true"><span></span></div>
+          <h3>Plano 180 dias</h3>
+          <p>Acompanhamento por seis meses, para consolidar resultados duradouros.</p>
+          <a class="btn btn-primario" data-wa="Olá, Ana! Vim pelo seu site e tenho interesse no plano de 180 dias." href="https://wa.me/5511976043761"><svg aria-hidden="true"><use href="#i-wa"/></svg>Começar o plano de 180 dias</a>
+        </article>
+      </div>
+      <p class="rodape-planos">Valores e detalhes de cada plano pelo WhatsApp.</p>
+    </div>
+  </section>
+
+  <section class="secao avaliacoes" id="avaliacoes" aria-labelledby="titulo-avaliacoes">
+    <div class="wrap">
+      <div class="placar">
+        <h2 class="secao-titulo" id="titulo-avaliacoes">O que dizem os pacientes</h2>
+        <div class="numero" style="margin-top:28px" aria-label="Nota 5,0 de 5">5,0</div>
+        <div class="resumo">
+          <span class="estrelas" aria-hidden="true"><svg><use href="#i-estrela"/></svg><svg><use href="#i-estrela"/></svg><svg><use href="#i-estrela"/></svg><svg><use href="#i-estrela"/></svg><svg><use href="#i-estrela"/></svg></span>
+          <p>54 avaliações no Google</p>
+          <a class="link-wa" href="https://www.google.com/maps/search/?api=1&amp;query=Nutricionista%20Ana%20Carolina%20Ribeiro%20Salto&amp;query_place_id=ChIJ4d5RcZpRz5QREBduL8goEqQ" target="_blank" rel="noopener">Ler todas no Google</a>
+        </div>
+      </div>
+      <div>
+      <ul class="depoimentos" aria-label="Trechos de avaliações">
+        <li>
+          <blockquote>Aprendi que emagrecer não precisa ser algo restritivo ou sofrido.</blockquote>
+          <p class="fonte">Avaliação no Google</p>
+        </li>
+        <li>
+          <blockquote>Ela fez um plano com a minha realidade e com aquilo que eu gosto.</blockquote>
+          <p class="fonte">Avaliação no Google</p>
+        </li>
+        <li>
+          <blockquote>Nunca na vida imaginei que ia ter lanche em uma dieta.</blockquote>
+          <p class="fonte">Avaliação no Google</p>
+        </li>
+        <li>
+          <blockquote>Pequenas mudanças, feitas com solidez, constância e equilíbrio, fazem toda a diferença.</blockquote>
+          <p class="fonte">Avaliação no Google</p>
+        </li>
+        <li>
+          <blockquote>O cardápio que você elaborou está perfeito e tem me ajudado demais.</blockquote>
+          <p class="fonte">Avaliação no Google</p>
+        </li>
+      </ul>
+      <div class="pontos" role="group" aria-label="Escolher avaliação"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao consultorio" id="consultorio" aria-labelledby="titulo-consultorio">
+    <div class="wrap">
+      <div>
+        <h2 class="secao-titulo" id="titulo-consultorio">Onde atendo</h2>
+        <div class="info">
+          <div>
+            <h3>Endereço</h3>
+            <address>Av. dos Migrantes, 816<br>Jardim Planalto, Salto, SP<br>CEP 13322-170</address>
+          </div>
+          <div>
+            <h3>Horários</h3>
+            <table class="horarios">
+              <tbody>
+                <tr><td>Segunda a quinta</td><td>8h às 19h</td></tr>
+                <tr><td>Sexta</td><td>8h às 21h</td></tr>
+                <tr><td>Sábado</td><td>8h às 19h</td></tr>
+                <tr><td>Domingo</td><td>Fechado</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <h3>Contato</h3>
+            <ul class="contatos">
+              <li>WhatsApp: <a data-wa="Olá, Ana! Vim pelo seu site e gostaria de agendar uma consulta." href="https://wa.me/5511976043761">(11) 97604-3761</a></li>
+              <li>E-mail: <a href="mailto:nutricionistanaribeiro@gmail.com">nutricionistanaribeiro@gmail.com</a></li>
+              <li>Instagram: <a href="https://www.instagram.com/nutri_anaribeiro/" target="_blank" rel="noopener">@nutri_anaribeiro</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="acoes">
+          <a class="btn btn-primario" data-wa="Olá, Ana! Vim pelo seu site e gostaria de agendar uma consulta." href="https://wa.me/5511976043761"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar consulta</a>
+          <a class="btn btn-contorno" href="https://www.google.com/maps/dir/?api=1&amp;destination=Nutricionista%20Ana%20Carolina%20Ribeiro%20Salto&amp;destination_place_id=ChIJ4d5RcZpRz5QREBduL8goEqQ" target="_blank" rel="noopener">Ver rota no Google Maps</a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa do consultório na Av. dos Migrantes, 816, Salto, SP" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Av.%20dos%20Migrantes%2C%20816%20-%20Jardim%20Planalto%2C%20Salto%20-%20SP&amp;z=16&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="final" aria-labelledby="titulo-final">
+    <div class="wrap">
+      <h2 id="titulo-final">Agende a sua consulta</h2>
+      <p>Fale com a Ana pelo WhatsApp e combine o melhor dia e horário para você.</p>
+      <a class="btn btn-claro" data-wa="Olá, Ana! Vim pelo seu site e gostaria de agendar uma consulta." href="https://wa.me/5511976043761"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar consulta pelo WhatsApp</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <img src="img/logo.png" alt="Ana Carolina Ribeiro, nutricionista" width="1552" height="672" loading="lazy">
+    <p>CRN-3 78052<br>Av. dos Migrantes, 816, Jardim Planalto, Salto, SP</p>
+    <div class="redes">
+      <a data-wa="Olá, Ana! Vim pelo seu site e gostaria de agendar uma consulta." href="https://wa.me/5511976043761">WhatsApp</a>
+      <a href="https://www.instagram.com/nutri_anaribeiro/" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:nutricionistanaribeiro@gmail.com">E-mail</a>
+    </div>
+  </div>
+</footer>
+
+<div class="barra-movel">
+  <a class="btn btn-primario" data-wa="Olá, Ana! Vim pelo seu site e gostaria de agendar uma consulta." href="https://wa.me/5511976043761"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar consulta pelo WhatsApp</a>
+</div>
+
+<script>
+(function(){
+  var numero = "5511976043761";
+  document.querySelectorAll("[data-wa]").forEach(function(a){
+    a.href = "https://wa.me/" + numero + "?text=" + encodeURIComponent(a.getAttribute("data-wa"));
+    a.target = "_blank";
+    a.rel = "noopener";
+  });
+  var topo = document.getElementById("topo");
+  var marcar = function(){ topo.classList.toggle("rolou", window.scrollY > 8); };
+  window.addEventListener("scroll", marcar, {passive:true});
+  marcar();
+  var barra = document.querySelector(".barra-movel");
+  var hero = document.querySelector(".hero .acoes");
+  var final = document.querySelector(".final");
+  if ("IntersectionObserver" in window && barra) {
+    var visiveis = new Set();
+    var io = new IntersectionObserver(function(entradas){
+      entradas.forEach(function(e){ e.isIntersecting ? visiveis.add(e.target) : visiveis.delete(e.target); });
+      barra.classList.toggle("oculta", visiveis.size > 0);
+    });
+    if (hero) io.observe(hero);
+    if (final) io.observe(final);
+  }
+
+  // Menu do celular
+  var botao = document.querySelector(".menu-botao");
+  var menu = document.getElementById("menu-movel");
+  var rotulo = botao.querySelector(".rotulo");
+  var definirAltura = function(){ document.documentElement.style.setProperty("--altura-topo", topo.offsetHeight + "px"); };
+  var alternarMenu = function(abrir){
+    definirAltura();
+    botao.setAttribute("aria-expanded", abrir ? "true" : "false");
+    rotulo.textContent = abrir ? "Fechar" : "Menu";
+    menu.classList.toggle("aberto", abrir);
+    document.body.classList.toggle("menu-aberto", abrir);
+  };
+  botao.addEventListener("click", function(){ alternarMenu(botao.getAttribute("aria-expanded") !== "true"); });
+  menu.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ alternarMenu(false); }); });
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape" && menu.classList.contains("aberto")) { alternarMenu(false); botao.focus(); } });
+  window.addEventListener("resize", function(){ definirAltura(); if (window.innerWidth > 960) alternarMenu(false); });
+
+  // Carrossel de avaliações no celular
+  var lista = document.querySelector(".depoimentos");
+  var pontos = document.querySelector(".pontos");
+  if (lista && pontos) {
+    var itens = Array.prototype.slice.call(lista.children);
+    itens.forEach(function(item, i){
+      var b = document.createElement("button");
+      b.type = "button";
+      b.setAttribute("aria-label", "Ver avaliação " + (i + 1) + " de " + itens.length);
+      b.addEventListener("click", function(){ lista.scrollTo({ left: item.offsetLeft - lista.offsetLeft - parseFloat(getComputedStyle(lista).paddingLeft), behavior: "smooth" }); });
+      pontos.appendChild(b);
+    });
+    var marcarPonto = function(){
+      var inicio = lista.scrollLeft, atual = 0, menor = Infinity;
+      itens.forEach(function(item, i){
+        var d = Math.abs(item.offsetLeft - lista.offsetLeft - parseFloat(getComputedStyle(lista).paddingLeft) - inicio);
+        if (d < menor) { menor = d; atual = i; }
+      });
+      Array.prototype.forEach.call(pontos.children, function(b, i){ b.setAttribute("aria-current", i === atual ? "true" : "false"); });
+    };
+    lista.addEventListener("scroll", function(){ window.requestAnimationFrame(marcarPonto); }, {passive:true});
+    marcarPonto();
+  }
+})();
+</script>
+</body>
+</html>
